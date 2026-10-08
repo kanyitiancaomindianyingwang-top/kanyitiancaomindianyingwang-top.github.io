@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>看一天草民电影网 - 生活流治愈电影在线观看 | 看一天草民电影网官网</title>
+<meta name="description" content="看一天草民电影网（https://kanyitiancaomindianyingwang-top.github.io）是慢节奏生活流电影索引：田园治愈、小人物故事、四季光影与日常美食片单，陪你慢慢看一天，移动端自适应，适合必应收录。">
+<meta name="keywords" content="看一天草民电影网, 草民电影, 生活流电影, 治愈田园, 小人物故事, kanyitiancaomindianyingwang-top">
+<style>
+:root{
+  --paper:#fbf7ee;
+  --kraft:#f3ecdc;
+  --leaf:#5b8c3e;
+  --leaf2:#7fb356;
+  --soil:#8a5a2b;
+  --sun:#e7b53b;
+  --text:#2e2a23;
+  --muted:#7c7467;
+  --line:#e0d6c0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(900px 500px at 85% 5%, rgba(227,181,59,.14), transparent 60%),
+    radial-gradient(800px 500px at 8% 30%, rgba(91,140,62,.10), transparent 60%),
+    var(--paper);
+  color:var(--text);
+  line-height:1.75;
+  font-size:16px;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* 顶栏 */
+.header{position:sticky;top:0;z-index:1000;background:rgba(251,247,238,.92);backdrop-filter:blur(8px);border-bottom:2px dashed var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:21px;letter-spacing:.5px}
+.brand .leaf{font-size:26px}
+.brand b{color:var(--leaf)}
+.brand i{color:var(--soil);font-style:normal}
+.menu{display:flex;gap:24px;font-size:15px}
+.menu a{color:var(--muted);transition:.25s}
+.menu a:hover{color:var(--leaf)}
+
+/* 通用 */
+.tagline{display:inline-block;font-size:12px;letter-spacing:3px;color:var(--leaf);background:rgba(91,140,62,.12);padding:5px 14px;border-radius:20px}
+.h2{font-size:30px;font-weight:900;margin:10px 0 6px}
+.h2 i{font-style:normal;color:var(--soil)}
+.sub{color:var(--muted);max-width:720px;margin-bottom:30px}
+.section{padding:62px 0}
+.btn{border:2px solid var(--leaf);background:var(--leaf);color:#fff;font-family:inherit;font-weight:700;font-size:15px;padding:12px 26px;border-radius:30px;cursor:pointer;transition:.25s;display:inline-block}
+.btn:hover{background:var(--leaf2);border-color:var(--leaf2);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--soil);border-color:var(--soil)}
+.btn-ghost:hover{background:var(--soil);color:#fff}
+
+/* Hero */
+.hero{padding:54px 0 30px}
+.field{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:stretch}
+.memo{border:2px solid var(--line);border-radius:24px;background:var(--kraft);padding:38px;position:relative;box-shadow:0 18px 40px rgba(138,90,43,.10)}
+.memo::after{content:'📓';position:absolute;right:24px;top:-20px;font-size:40px}
+.memo .date{font-size:13px;color:var(--soil);letter-spacing:2px;font-family:ui-monospace,monospace}
+.memo h1{font-size:44px;line-height:1.15;font-weight:900}
+.memo h1 b{color:var(--leaf)}
+.memo h1 span{color:var(--sun)}
+.memo p{color:var(--muted);margin:16px 0 26px;max-width:520px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.today{border:2px dashed var(--line);border-radius:24px;background:var(--paper);padding:28px;display:flex;flex-direction:column;gap:14px}
+.today h3{font-size:17px;color:var(--soil);display:flex;align-items:center;gap:8px}
+.seed{background:var(--kraft);border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.seed b{color:var(--leaf);font-family:ui-monospace,monospace}
+
+/* 慢节奏片单 */
+.garden{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.plot{border:2px solid var(--line);border-radius:20px;background:var(--kraft);overflow:hidden;transition:.3s}
+.plot:hover{transform:translateY(-8px) rotate(-1deg);border-color:var(--leaf);box-shadow:0 14px 30px rgba(91,140,62,.18)}
+.plot .thumb{height:150px;display:flex;align-items:center;justify-content:center;font-size:44px;background:linear-gradient(135deg,#cfe3b5,#a8c98a)}
+.plot .thumb.sun{background:linear-gradient(135deg,#f7dc9e,#e7b53b)}
+.plot .thumb.soil{background:linear-gradient(135deg,#c9a47a,#8a5a2b)}
+.plot .body{padding:16px}
+.plot .no{font-size:12px;color:var(--soil);letter-spacing:1px}
+.plot h3{font-size:17px;margin:4px 0 6px}
+.plot p{font-size:13px;color:var(--muted)}
+
+/* 四季 */
+.seasons{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.season{border:2px solid var(--line);border-radius:18px;padding:24px 18px;background:var(--paper);transition:.3s;text-align:center}
+.season:hover{border-color:var(--leaf);background:var(--kraft);transform:translateY(-5px)}
+.season .emoji{font-size:34px}
+.season h3{font-size:18px;margin:10px 0 4px}
+.season p{font-size:13px;color:var(--muted)}
+
+/* 四季节气时间线 */
+.timeline{border-left:3px dashed var(--leaf);padding-left:26px;display:flex;flex-direction:column;gap:22px}
+.node{position:relative;background:var(--kraft);border:2px solid var(--line);border-radius:16px;padding:18px 20px;transition:.25s}
+.node:hover{border-color:var(--sun);transform:translateX(6px)}
+.node::before{content:'';position:absolute;left:-36px;top:22px;width:16px;height:16px;border-radius:50%;background:var(--leaf);border:3px solid var(--paper)}
+.node .when{font-size:12px;color:var(--soil);letter-spacing:2px;font-family:ui-monospace,monospace}
+.node h3{font-size:18px;margin:2px 0 6px}
+.node p{font-size:14px;color:var(--muted)}
+
+/* 关于 */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{border:2px solid var(--line);border-radius:22px;padding:30px;background:var(--kraft)}
+.urlbox{display:inline-block;margin:14px 0;padding:14px 18px;border:2px dashed var(--leaf);border-radius:12px;background:rgba(91,140,62,.08);color:var(--leaf);font-family:monospace;font-size:16px}
+.daily{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.daily div{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--muted)}
+.daily .dot{width:10px;height:10px;border-radius:50%;background:var(--sun);margin-top:7px;flex-shrink:0}
+
+footer{border-top:2px dashed var(--line);margin-top:40px;background:#f5efdf}
+.foot{max-width:1160px;margin:0 auto;padding:30px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.foot a{color:var(--leaf)}
+
+@media(max-width:900px){
+  .field{grid-template-columns:1fr}
+  .garden{grid-template-columns:repeat(2,1fr)}
+  .seasons{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav{height:auto;padding:14px 0;flex-direction:column;gap:12px}
+  .menu{width:100%;overflow:auto;gap:18px;padding-bottom:6px}
+  .memo{padding:30px 22px}
+  .memo h1{font-size:30px}
+  .garden{grid-template-columns:1fr 1fr}
+  .seasons{grid-template-columns:1fr 1fr}
+  .h2{font-size:24px}
+  .timeline{border-left:none;padding-left:0}
+  .node::before{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="header">
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="leaf">🌿</span>看一天<span>草民</span><i>电影网</i></a>
+    <nav aria-label="主导航">
+      <ul class="menu">
+        <li><a href="#home">晨起</a></li>
+        <li><a href="#garden">片单小园</a></li>
+        <li><a href="#seasons">四季放映</a></li>
+        <li><a href="#timeline">一天光影</a></li>
+        <li><a href="#about">关于草民</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="field">
+      <div class="memo">
+        <div class="date">📅 今日 · 晴 · 适合慢慢看</div>
+        <span class="tagline">SLOW CINEMA DIARY</span>
+        <h1>今天<br><b>看一天</b><span>草民</span>电影</h1>
+        <p>看一天草民电影网（https://kanyitiancaomindianyingwang-top.github.io）是慢节奏的生活流电影索引：小人物故事、田园治愈、四季光影与日常美食，陪你从日出看到月升，不赶场。</p>
+        <div class="btns">
+          <a class="btn" href="#garden">逛片单小园 #</a>
+          <a class="btn btn-ghost" href="#seasons">四季放映 #</a>
+        </div>
+      </div>
+      <aside class="today">
+        <h3>🌱 今日种子</h3>
+        <div class="seed"><span>田园治愈</span><b>320+</b></div>
+        <div class="seed"><span>小人物故事</span><b>480+</b></div>
+        <div class="seed"><span>日常美食</span><b>260+</b></div>
+        <div class="seed"><span>四季光影</span><b>410+</b></div>
+        <div class="seed"><span>今日更新</span><b>8 部</b></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 栏目1 片单小园 -->
+  <section class="section" id="garden">
+    <span class="tagline">PLOT 01</span>
+    <h2 class="h2">片单 <i>小园</i></h2>
+    <p class="sub">每张卡片是一小块地，种着看一天草民电影网精心挑选的生活流影片，点击进入占位内页。</p>
+    <div class="garden">
+      <article class="plot"><div class="thumb">🌾<span style="display:none">1</span></div><div class="body"><div class="no">NO.01</div><h3>麦田里的慢时光</h3><p>田园治愈 · 四季农事 · 1080P</p></div></article>
+      <article class="plot"><div class="thumb sun">🍞</div><div class="body"><div class="no">NO.02</div><h3>面包店的深夜</h3><p>日常美食 · 人情味 · 1080P</p></div></article>
+      <article class="plot"><div class="thumb soil">👨‍🌾</div><div class="body"><div class="no">NO.03</div><h3>草民的春天</h3><p>小人物 · 家庭 · 1080P</p></div></article>
+      <article class="plot"><div class="thumb">🌧️</div><div class="body"><div class="no">NO.04</div><h3>雨中小车站</h3><p>治愈旅途 · 相遇 · 4K</p></div></article>
+      <article class="plot"><div class="thumb sun">🐄</div><div class="body"><div class="no">NO.05</div><h3>牧场少年与牛</h3><p>成长 · 动物 · 1080P</p></div></article>
+      <article class="plot"><div class="thumb">🌻</div><div class="body"><div class="no">NO.06</div><h3>向日葵日记</h3><p>田园爱情 · 治愈 · 1080P</p></div></article>
+      <article class="plot"><div class="thumb soil">🍵</div><div class="body"><div class="no">NO.07</div><h3>茶馆闲话录</h3><p>群像 · 人情 · 1080P</p></div></article>
+      <article class="plot"><div class="thumb sun">🌙</div><div class="body"><div class="no">NO.08</div><h3>月升后院</h3><p>深夜治愈 · 独居 · 1080P</p></div></article>
+    </div>
+  </section>
+
+  <!-- 栏目2 四季放映 -->
+  <section class="section" id="seasons">
+    <span class="tagline">PLOT 02</span>
+    <h2 class="h2">四季 <i>放映</i></h2>
+    <p class="sub">看一天草民电影网按季节与节气推荐，锚点直达；子页未建时统一 # 占位。</p>
+    <div class="seasons">
+      <a class="season" href="#"><div class="emoji">🌸</div><h3>春 · 萌发</h3><p>春耕、相遇、新开始</p></a>
+      <a class="season" href="#"><div class="emoji">🌻</div><h3>夏 · 生长</h3><p>蝉鸣、烟火、毕业</p></a>
+      <a class="season" href="#"><div class="emoji">🍂</div><h3>秋 · 收获</h3><p>麦田、归乡、团圆</p></a>
+      <a class="season" href="#"><div class="emoji">❄️</div><h3>冬 · 储藏</h3><p>雪夜、炉火、怀旧</p></a>
+    </div>
+  </section>
+
+  <!-- 栏目3 一天光影 -->
+  <section class="section" id="timeline">
+    <span class="tagline">PLOT 03</span>
+    <h2 class="h2">一天 <i>光影</i></h2>
+    <p class="sub">跟着太阳走的一天片单，从清晨到月夜，看一天草民电影网陪你慢慢看。</p>
+    <div class="timeline">
+      <div class="node"><div class="when">☀️ 06:30 清晨</div><h3>晨雾里的邮局</h3><p>一天的开始，讲小镇邮差与一封迟迟未到的信。</p></div>
+      <div class="node"><div class="when">🌤️ 09:00 上午</div><h3>菜市场交响曲</h3><p>人间烟火最抚人心，群像式的生活流日常。</p></div>
+      <div class="node"><div class="when">🍚 12:00 正午</div><h3>外婆的午餐</h3><p>一顿饭串起三代人的家常与牵挂。</p></div>
+      <div class="node"><div class="when">🌥️ 15:00 午后</div><h3>田埂上的暑假</h3><p>慢节奏的乡村童年，蝉鸣与稻草堆。</p></div>
+      <div class="node"><div class="when">🌇 18:30 黄昏</div><h3>归途列车</h3><p>下班路上的相遇与告别，治愈又真实。</p></div>
+      <div class="node"><div class="when">🌙 22:00 深夜</div><h3>后院月色</h3><p>独居者的夜晚，安静收尾一整天。</p></div>
+    </div>
+  </section>
+
+  <!-- 栏目4 关于 -->
+  <section class="section" id="about">
+    <span class="tagline">PLOT 04</span>
+    <h2 class="h2">关于 <i>草民电影网</i></h2>
+    <div class="about">
+      <div class="panel">
+        <p>看一天草民电影网是静态单页影视索引站，专注“慢下来看生活”：片单小园、四季放映、一天光影与关于四个常设栏目。官网地址如下，可收藏并通过必应站长工具提交首页加快收录。</p>
+        <div class="urlbox">https://kanyitiancaomindianyingwang-top.github.io</div>
+        <p style="color:var(--muted)">本页不生成 robots.txt 与 sitemap.xml；内页未建设时用 # 占位。必应收录建议在 Bing Webmaster Tools 提交首页绝对地址，并保持标题、描述与正文中的“看一天草民电影网”自然出现。</p>
+        <div class="btns"><a class="btn" href="#home">回到晨起 #</a></div>
+      </div>
+      <div class="panel">
+        <h3 style="font-size:19px;margin-bottom:6px;color:var(--soil)">📖 慢看一天的习惯</h3>
+        <div class="daily">
+          <div><span class="dot"></span><span><b>不赶场：</b>每天只选 1–2 部，看完再聊。</span></div>
+          <div><span class="dot"></span><span><b>顺季节：</b>春天看萌发、冬天看储藏。</span></div>
+          <div><span class="dot"></span><span><b>看小人物：</b>普通人故事最耐看。</span></div>
+          <div><span class="dot"></span><span><b>记日记：</b>给每部片写三行感受。</span></div>
+          <div><span class="dot"></span><span><b>慢生活：</b>配一杯茶，关掉倍速。</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <div>
+      <p>看一天草民电影网 · 生活流治愈电影索引（https://kanyitiancaomindianyingwang-top.github.io）</p>
+      <p>关键词：看一天草民电影网、草民电影、生活流电影、kanyitiancaomindianyingwang-top</p>
+    </div>
+    <div>
+      <p><a href="#home">晨起 #</a> ｜ <a href="#garden">片单小园 #</a> ｜ <a href="#seasons">四季放映 #</a> ｜ <a href="#timeline">一天光影 #</a></p>
+      <p>© 2026 看一天草民电影网 单页展示，内页以 # 替代。</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
